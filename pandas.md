@@ -3,6 +3,8 @@
 ```
 import pandas as pd
 ``` 
+## Reference
+https://pandas.pydata.org/docs/reference/index.html
 
 ## Help
 
@@ -37,18 +39,19 @@ dtype: int64
 
 > Option 1: create dataframe from dict
 ```python
-data_dict = {'Col1': [1,2,3],
-             'Col2': ['DE','FR','IT']}
+data_dict = {'Numbers': [1,2,3],
+             'Countries': ['DE','FR','IT'],
+             'Color': ['Blue','Red','Green']}
 df = pd.DataFrame(data=data_dict) 
 ``` 
 
 REPL output:
 ```python
 >>> df
-   Col1 Col2
-0     1   DE
-1     2   FR
-2     3   IT
+   Numbers Countries  Color
+0        1        DE   Blue
+1        2        FR    Red
+2        3        IT  Green
 ```
 
 > Option 2: create dataframe from numpy ndarray
@@ -106,13 +109,60 @@ df.to_csv('/path/to/df.csv')
 ``` 
 
 # Data manipulation functions
-pd.melt
-pd.pivot
-pd.crosstab
-pd.cut
-pd.qcut
-pd.merge
-pd.merge
+
+Command | Description 
+| --- | --- |
+| `df.melt(id_vars,value_vars)` | Unpivot a DataFrame from wide to long format, optionally leaving identifiers set. | 
+| `df.pivot(index,columns)` | content |
+| `df.crosstab()` | content |
+| `df.cut()` | content |
+| `df.merge()` | content |
+
+> pd.melt
+
+REPL output:
+```python
+>>> df.melt()
+    variable  value
+0    Numbers      1
+1    Numbers      2
+2    Numbers      3
+3  Countries     DE
+4  Countries     FR
+5  Countries     IT
+6      Color   Blue
+7      Color    Red
+8      Color  Green
+
+>>> df.melt(['Color'])
+   Color   variable value
+0   Blue    Numbers     1
+1    Red    Numbers     2
+2  Green    Numbers     3
+3   Blue  Countries    DE
+4    Red  Countries    FR
+5  Green  Countries    IT
+
+>>> df.melt(['Color'],['Countries'])
+   Color   variable value
+0   Blue  Countries    DE
+1    Red  Countries    FR
+2  Green  Countries    IT
+``` 
+
+> pd.pivot
+
+REPL output:
+```python
+>>> df.pivot(index='Countries',columns=['Numbers'])
+          Color            
+Numbers       1    2      3
+Countries                  
+DE         Blue  NaN    NaN
+FR          NaN  Red    NaN
+IT          NaN  NaN  Green
+```
+
 
 # Datetimelike manipulation functions
 pd.to_datetime()
