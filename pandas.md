@@ -115,11 +115,13 @@ df.to_csv('/path/to/df.csv')
 | --- | --- | --- |
 | adding column (opt.1) | `df['new_col1'] = list` | Adding list to existing DataFrame as a new column at the end | 
 | adding column (opt.2) | `df.insert(2, 'new_col2', list) ` | Insert list to existing DataFrame as a new column at specific position |
+| filter df | `df.filter()` | Select columns or rows by name, regex |
+| filter df by column values (opt.1) | `df.query("Color == 'Blue'")` | Filter based on a query string |
+| filter df by column values (opt.2) | `df[list_bool]` | Filter by a given list of Booleans, like list_bool = [True, False, True, ...] |
 | drop column (opt.1) | `df.drop(columns=['col1', 'col2'])` | Drop column by giving list of column names |
 | drop columns (opt.2) | `df.pop('col_name')` | Drop a column and return the dropped column |
-| drop NA | `df.dropna` | ... |
-| filter df by column values (opt.1) | `df.dropna` | ... |
-| filter df by column values (opt.2) | `df.dropna` | ... |
+| drop rows | `df.drop(index=[0,2])` | Drop rows based on list of index |
+| drop NA | `df.dropna()` | Drop the rows where at least one element is missing |
 
 > pd.append(dict, ignore_index=True)
 
@@ -197,6 +199,9 @@ DE         Blue  NaN    NaN
 FR          NaN  Red    NaN
 IT          NaN  NaN  Green
 ```
+
+## Further manipulations
+
 
 
 # Datetimelike manipulation functions
