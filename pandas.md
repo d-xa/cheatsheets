@@ -121,6 +121,27 @@ df.to_csv('/path/to/df.csv')
 | filter df by column values (opt.1) | `df.dropna` | ... |
 | filter df by column values (opt.2) | `df.dropna` | ... |
 
+> pd.append(dict, ignore_index=True)
+
+```python
+# append dictionary as new row
+list_keys = list(df.columns) # e.g. ['Numbers', 'Countries', 'Color']
+list_values = [11, 'UK', 'Yellow']
+data_dict = dict(zip(list_keys,list_values), ignore_index=True) 
+```
+> df.loc[i] = list
+```python
+# insert new row at specific position 
+df.loc[2] = [11, 'ES', 'Purple']
+
+# insert new row at top position 
+df.loc[-1] = [-12, 'JP', 'White']
+
+# insert new row at bottom position
+bottom_pos = df.shape[0]
+df.loc[bottom_pos] = [-4, 'US', 'Brown']
+```
+
 https://www.listendata.com/2019/07/how-to-filter-pandas-dataframe.html
 
 ## general functions
