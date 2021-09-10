@@ -110,13 +110,27 @@ df.to_csv('/path/to/df.csv')
 
 # Data manipulation functions
 
-Command | Description 
+## common manipulations
+| Target | Command | Description 
+| --- | --- | --- |
+| adding column (opt.1) | `df['new_col1'] = list` | Adding list to existing DataFrame as a new column at the end | 
+| adding column (opt.2) | `df.insert(2, 'new_col2', list) ` | Insert list to existing DataFrame as a new column at specific position |
+| drop column (opt.1) | `df.drop(columns=['col1', 'col2'])` | Drop column by giving list of column names |
+| drop columns (opt.2) | `df.pop('col_name')` | Drop a column and return the dropped column |
+| drop NA | `df.dropna` | ... |
+| filter df by column values (opt.1) | `df.dropna` | ... |
+| filter df by column values (opt.2) | `df.dropna` | ... |
+
+https://www.listendata.com/2019/07/how-to-filter-pandas-dataframe.html
+
+## general functions
+| Command | Description 
 | --- | --- |
-| `df.melt(id_vars,value_vars)` | Unpivot a DataFrame from wide to long format, optionally leaving identifiers set. | 
-| `df.pivot(index,columns)` | content |
-| `df.crosstab()` | content |
-| `df.cut()` | content |
-| `df.merge()` | content |
+| `pd.melt(df,...)` or `df.melt(id_vars,value_vars)` | Unpivot a DataFrame from wide to long format, optionally leaving identifiers set. | 
+| `pd.pivot(df,...)` or `df.pivot(index,columns)` | content |
+| `pd.crosstab(df,...)` or `df.crosstab()` | content |
+| `pd.cut(df,...)` or `df.cut()` | content |
+| `pd.merge(df,...)` or `df.merge()` | content |
 
 > pd.melt
 
@@ -175,3 +189,5 @@ pd.bdate_range()
 ## Dataframe attributes
 
 
+# TODO
+- multiindex dataframe
