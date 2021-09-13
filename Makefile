@@ -5,6 +5,12 @@ install:
 	pip install --upgrade pip &&\
 	pip install -r requirements.txt
 
+htmlbook:
+	jupyter-book build cheatsheets-book/
+
+pdfbook:
+	jupyter-book build cheatsheets-book/ --builder pdfhtml
+
 style:
 	pycodestyle *.py
 

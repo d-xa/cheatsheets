@@ -17,7 +17,7 @@ jupyter-book create cheatsheets-book
 
 > Build the html version of book
 ```python
-jupyter-book create cheatsheets-book
+jupyter-book build cheatsheets-book/
 ```
 
 > Build the pdf version of book
