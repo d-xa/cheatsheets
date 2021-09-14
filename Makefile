@@ -11,6 +11,10 @@ htmlbook:
 pdfbook:
 	jupyter-book build cheatsheets-book/ --builder pdfhtml
 
+updatedocs:
+	touch docs/.nojekyll
+	cp -r cheatsheets-book/_build/html/* docs/
+
 style:
 	pycodestyle *.py
 
