@@ -16,11 +16,19 @@ jupyter-book create cheatsheets-book
 ```
 
 > Build the html version of book
+```bash
+make htmlbook
+```
+or
 ```python
 jupyter-book build cheatsheets-book/
 ```
 
 > Build the pdf version of book
+```bash
+make pdfbook
+```
+or
 ```python
 jupyter-book build cheatsheets-book/ --builder pdfhtml
 ```
