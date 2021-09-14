@@ -3,5 +3,5 @@
 format: jb-book
 root: intro
 chapters:
-- file: content/pandas
-- file: notebooks
+- file: content/pandas.md
+- file: content/thinkbayes
