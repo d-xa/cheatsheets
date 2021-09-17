@@ -5,4 +5,5 @@ root: intro
 chapters:
 - file: content/pandas.md
 - file: content/git.md
-- file: content/thinkbayes
+- file: content/pyspark.md
+
