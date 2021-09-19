@@ -1,9 +1,10 @@
 # Table of contents
 
 format: jb-book
-root: intro
+root: content/intro
 chapters:
 - file: content/pandas.md
 - file: content/git.md
 - file: content/pyspark.md
+- file: content/bash
 
