@@ -39,7 +39,10 @@ docker image rm alpine:3.4
 ```
 
 ## Run
-
+Run image busybox, if no tag provided will take the latest by default
+```
+docker run busybox
+```
 
 
 ## Share
@@ -56,4 +59,10 @@ docker tag myimage:1.0 myrepo/myimage:2.0
 Push an image to a registry
 ```
 docker push myrepo/myimage:2.0
+```
+
+## Troubleshooting
+Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock
+```
+sudo chmod 666 /var/run/docker.sock
 ```
