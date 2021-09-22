@@ -221,16 +221,6 @@
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_6813</span><span class="o">/</span><span class="mf">4080736814.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;pandas&#39;
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -3555,7 +3545,7 @@ class DataFrame(pandas.core.generic.NDFrame, pandas.core.arraylike.OpsMixin)
  |         B   True    False
  |         C   True    False
  |  
- |  groupby(self, by=None, axis=0, level=None, as_index: &#39;bool&#39; = True, sort: &#39;bool&#39; = True, group_keys: &#39;bool&#39; = True, squeeze: &#39;bool&#39; = &lt;object object at 0x7f165c060330&gt;, observed: &#39;bool&#39; = False, dropna: &#39;bool&#39; = True) -&gt; &#39;DataFrameGroupBy&#39;
+ |  groupby(self, by=None, axis=0, level=None, as_index: &#39;bool&#39; = True, sort: &#39;bool&#39; = True, group_keys: &#39;bool&#39; = True, squeeze: &#39;bool&#39; = &lt;object object at 0x7f94bbc262f0&gt;, observed: &#39;bool&#39; = False, dropna: &#39;bool&#39; = True) -&gt; &#39;DataFrameGroupBy&#39;
  |      Group DataFrame using a mapper or by a Series of columns.
  |      
  |      A groupby operation involves some combination of splitting the
@@ -9393,7 +9383,7 @@ class DataFrame(pandas.core.generic.NDFrame, pandas.core.arraylike.OpsMixin)
  |      3 9       7  2013    84
  |      4 16     10  2014    31
  |  
- |  shift(self, periods=1, freq=None, axis=0, fill_value=&lt;object object at 0x7f165c060330&gt;) -&gt; &#39;DataFrame&#39;
+ |  shift(self, periods=1, freq=None, axis=0, fill_value=&lt;object object at 0x7f94bbc262f0&gt;) -&gt; &#39;DataFrame&#39;
  |      Shift index by desired number of periods with an optional time `freq`.
  |      
  |      When `freq` is not passed, shift the index without realigning the data.
@@ -10550,7 +10540,7 @@ class DataFrame(pandas.core.generic.NDFrame, pandas.core.arraylike.OpsMixin)
  |      |  3 | quetzal  |
  |      +----+----------+
  |  
- |  to_numpy(self, dtype=None, copy: &#39;bool&#39; = False, na_value=&lt;object object at 0x7f165c060330&gt;) -&gt; &#39;np.ndarray&#39;
+ |  to_numpy(self, dtype=None, copy: &#39;bool&#39; = False, na_value=&lt;object object at 0x7f94bbc262f0&gt;) -&gt; &#39;np.ndarray&#39;
  |      Convert the DataFrame to a NumPy array.
  |      
  |      .. versionadded:: 0.24.0
