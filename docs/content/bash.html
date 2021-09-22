@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>&lt;no title&gt; &#8212; Cheatsheets</title>
+    <title>Bash Cheatsheet &#8212; Cheatsheets</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -51,6 +51,7 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Pyspark Cheatsheet" href="pyspark.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -85,7 +86,7 @@
   </a>
  </li>
 </ul>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="pandas.html">
    Pandas Cheatsheet
@@ -106,8 +107,8 @@
    Pyspark Cheatsheet
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="bash.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Bash Cheatsheet
   </a>
  </li>
@@ -152,7 +153,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/content/tensorflow.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/content/bash.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -194,7 +195,17 @@
                 <i class="fas fa-list"></i> Contents
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="simple visible nav section-nav flex-column">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#apt">
+   APT
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#display-settings">
+   Display settings
+  </a>
+ </li>
 </ul>
 
             </nav>
@@ -206,7 +217,56 @@
         
               <div>
                 
-  
+  <div class="section" id="bash-cheatsheet">
+<h1>Bash Cheatsheet<a class="headerlink" href="#bash-cheatsheet" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="apt">
+<h2>APT<a class="headerlink" href="#apt" title="Permalink to this headline">¶</a></h2>
+<p>Add sources for future updates (example with vscode):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">echo</span> <span class="s2">&quot;deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main&quot;</span> <span class="o">|</span> <span class="n">sudo</span> <span class="n">tee</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">apt</span><span class="o">/</span><span class="n">sources</span><span class="o">.</span><span class="n">list</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">vscode</span><span class="o">.</span><span class="n">list</span>
+</pre></div>
+</div>
+<p>Get updates</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span> <span class="n">update</span>
+</pre></div>
+</div>
+<p>Get list of installed apt:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">apt</span> <span class="nb">list</span> <span class="o">--</span><span class="n">installed</span>
+</pre></div>
+</div>
+<p>Install software</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>sudo apt install $PACKAGENAME
+</pre></div>
+</div>
+<p>Remove software but keep configurations and plugins</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>sudo apt-get remove $PACKAGENAME
+</pre></div>
+</div>
+<p>Completely remove software and dependencies</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>sudo apt-get --purge autoremove $PACKAGENAME
+</pre></div>
+</div>
+</div>
+<div class="section" id="display-settings">
+<h2>Display settings<a class="headerlink" href="#display-settings" title="Permalink to this headline">¶</a></h2>
+<p>Get current setting</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">xrandr</span> <span class="o">--</span><span class="n">current</span> 
+</pre></div>
+</div>
+<p>List active monitors - get names:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">xrandr</span> <span class="o">--</span><span class="n">listactivemonitors</span>
+</pre></div>
+</div>
+<p>Revert back to inital display setting</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">xrandr</span> <span class="o">-</span><span class="n">s</span> <span class="mi">0</span>
+</pre></div>
+</div>
+<p>Scale monitor to 199%</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>xrandr --output $MONITORNAME --scale 1.99x1.99
+</pre></div>
+</div>
+</div>
+</div>
+
     <script type="text/x-thebe-config">
     {
         requestKernel: true,
@@ -236,6 +296,15 @@
 
 <div class='prev-next-bottom'>
     
+    <div id="prev">
+        <a class="left-prev" href="pyspark.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">Pyspark Cheatsheet</p>
+            </div>
+        </a>
+    </div>
 
 </div>
         
