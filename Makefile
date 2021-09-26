@@ -6,9 +6,11 @@ install:
 	pip install -r requirements.txt
 
 htmlbook:
+	rm -r cheatsheets-book/_build/html/*
 	jupyter-book build cheatsheets-book/
 
 pdfbook:
+	rm -r cheatsheets-book/_build/html/*
 	jupyter-book build cheatsheets-book/ --builder pdfhtml
 
 updatedocs:
