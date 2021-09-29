@@ -2,20 +2,26 @@ venv:
 	python3 -m venv .venv
 
 install:
-	pip install --upgrade pip &&\
-	pip install -r requirements.txt
+	. .venv/bin/activate; \
+	pip install --upgrade pip && pip install -r requirements.txt
 
+install-tex:
+	sudo apt-get install texlive-latex-recommended texlive-latex-extra \
+                     texlive-fonts-recommended texlive-fonts-extra \
+                     texlive-xetex latexmk
 htmlbook:
-	rm -r cheatsheets-book/_build/html/*
+	rm -rf cheatsheets-book/_build/html/*
+	. .venv/bin/activate; \
 	jupyter-book build cheatsheets-book/
 
 pdfbook:
-	rm -r cheatsheets-book/_build/html/*
-	jupyter-book build cheatsheets-book/ --builder pdfhtml
+	rm -rf cheatsheets-book/_build/latex/*
+	. .venv/bin/activate; \
+	jupyter-book build cheatsheets-book/ --builder pdflatex
 
 updatedocs:
 	touch docs/.nojekyll
-	cp -r cheatsheets-book/_build/html/* docs/
+	cp -rf cheatsheets-book/_build/html/* docs/
 
 style:
 	pycodestyle *.py

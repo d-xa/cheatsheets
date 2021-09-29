@@ -7,5 +7,11 @@ unrar e test.rar
 
 > convert epub to pdf
 ```
-pandoc -f epub -t test.epub -o test.pdf
+pandoc test.epub -o test.pdf
 ```
+
+
+> open pdf
+``` 
+evince file.pdf
+``` 
