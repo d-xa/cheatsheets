@@ -66,3 +66,11 @@ Got permission denied while trying to connect to the Docker daemon socket at uni
 ```
 sudo chmod 666 /var/run/docker.sock
 ```
+
+or by adding group as described in https://docs.docker.com/engine/install/linux-postinstall/
+```
+sudo groupadd docker
+getent group
+sudo usermod -aG docker $USER
+newgrp docker
+```

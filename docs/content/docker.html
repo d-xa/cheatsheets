@@ -89,6 +89,11 @@
 </ul>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
+  <a class="reference internal" href="casi_1.html">
+   Casi 1
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="pandas.html">
    Pandas Cheatsheet
   </a>
@@ -321,6 +326,13 @@ docker rm $(docker ps -a -q -f status=exited)
 <h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">¶</a></h2>
 <p>Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">chmod</span> <span class="mi">666</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">run</span><span class="o">/</span><span class="n">docker</span><span class="o">.</span><span class="n">sock</span>
+</pre></div>
+</div>
+<p>or by adding group as described in <a class="reference external" href="https://docs.docker.com/engine/install/linux-postinstall/">https://docs.docker.com/engine/install/linux-postinstall/</a></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>sudo groupadd docker
+getent group
+sudo usermod -aG docker $USER
+newgrp docker
 </pre></div>
 </div>
 </div>

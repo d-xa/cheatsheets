@@ -3,6 +3,7 @@
 format: jb-book
 root: content/intro
 chapters:
+- file: content/casi_1
 - file: content/pandas
 - file: content/docker
 - file: content/git
