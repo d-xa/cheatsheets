@@ -3,10 +3,10 @@
 format: jb-book
 root: content/intro
 chapters:
-- file: content/casi_1
-- file: content/pandas
-- file: content/docker
-- file: content/git
-- file: content/github
-- file: content/pyspark
-- file: content/bash
+- file: content/markdown/casi_1
+- file: content/notebook/notebooks
+- file: content/markdown/docker
+- file: content/markdown/git
+- file: content/markdown/github
+- file: content/markdown/pyspark
+- file: content/markdown/bash
