@@ -7,5 +7,6 @@ chapters:
 - file: content/pandas
 - file: content/docker
 - file: content/git
+- file: content/github
 - file: content/pyspark
 - file: content/bash
