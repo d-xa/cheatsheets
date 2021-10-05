@@ -1,10 +1,10 @@
 # Table of contentsa
 
 format: jb-book
-root: content/intro
+root: content/markdown/intro
 chapters:
 - file: content/markdown/casi_1
-- file: content/notebook/notebooks
+#- file: content/notebook/pandas
 - file: content/markdown/docker
 - file: content/markdown/git
 - file: content/markdown/github
