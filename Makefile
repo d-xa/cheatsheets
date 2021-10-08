@@ -2,6 +2,7 @@ venv:
 	python3 -m venv .venv
 
 install-pip:
+	make venv
 	. .venv/bin/activate; \
 	export PIP_USER=no; \
 	pip install --upgrade pip && pip install -r requirements.txt
@@ -13,7 +14,6 @@ install-tex:
                     texlive-xetex latexmk
 
 install:
-	make venv
 	make install-pip
 	make install-tex
 
