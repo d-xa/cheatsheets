@@ -31,4 +31,7 @@ updatedocs:
 	touch docs/.nojekyll
 	cp -rf book/_build/html/* docs/
 
+lsmd:
+	sh util.sh
+		
 all: install htmlbook pdfbook 

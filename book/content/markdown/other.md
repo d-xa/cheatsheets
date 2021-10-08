@@ -1,4 +1,4 @@
-# Collection of other useful things
+# Other useful Cheatsheet
 
 > unrar package
 ```
