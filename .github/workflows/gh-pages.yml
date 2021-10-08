@@ -16,7 +16,7 @@ jobs:
           fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
 
       - name: Setup Virtual Env and Pip
-          run: make install-pip
+        run: make install-pip
 
       - name: Build HTML page
         run: make htmlbook
