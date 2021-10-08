@@ -1,0 +1,682 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Git Cheatsheet &#8212; Cheatsheets</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Pyspark Cheatsheet" href="pyspark.html" />
+    <link rel="prev" title="Docker Cheatsheet" href="docker.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      <h1 class="site-logo" id="site-title">Cheatsheets</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Cheatsheets
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="casi_1.html">
+   Casi 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="pandas.html">
+   Pandas Cheatsheet
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="docker.html">
+   Docker Cheatsheet
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Git Cheatsheet
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="pyspark.html">
+   Pyspark Cheatsheet
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="bash.html">
+   Bash Cheatsheet
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/content/git.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/d-xa/cheatsheets"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#setup">
+   Setup
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#general">
+   General
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reset">
+   Reset
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#update-delete">
+   Update &amp; Delete
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#branch">
+   Branch
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#merge">
+   Merge
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#stash">
+   Stash
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#gitignore-gitkeep">
+   Gitignore &amp; Gitkeep
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#log">
+   Log
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#compare">
+   Compare
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#releases-version-tags">
+   Releases &amp; Version Tags
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#collaborate">
+   Collaborate
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#archive">
+   Archive
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#troubleshooting">
+   Troubleshooting
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#security">
+   Security
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#large-file-storage">
+   Large File Storage
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#git-config">
+   Git Config
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="git-cheatsheet">
+<h1>Git Cheatsheet<a class="headerlink" href="#git-cheatsheet" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="setup">
+<h2>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h2>
+<p>See where Git is located:
+<code class="docutils literal notranslate"><span class="pre">which</span> <span class="pre">git</span></code></p>
+<p>Get the version of Git:
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">--version</span></code></p>
+<p>Create an alias (shortcut) for <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">status</span></code>:
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">config</span> <span class="pre">--global</span> <span class="pre">alias.st</span> <span class="pre">status</span></code></p>
+<p>Help:
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">help</span></code></p>
+</div>
+<div class="section" id="general">
+<h2>General<a class="headerlink" href="#general" title="Permalink to this headline">¶</a></h2>
+<p>Initialize Git:
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">init</span></code></p>
+<p>Get everything ready to commit:
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span> <span class="pre">.</span></code></p>
+<p>Get custom file ready to commit:
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span> <span class="pre">index.html</span></code></p>
+<p>Commit changes:
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span> <span class="pre">-m</span> <span class="pre">&quot;Message&quot;</span></code></p>
+<p>Commit changes with title and description:
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span> <span class="pre">-m</span> <span class="pre">&quot;Title&quot;</span> <span class="pre">-m</span> <span class="pre">&quot;Description...&quot;</span></code></p>
+<p>Add and commit in one step:
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span> <span class="pre">-am</span> <span class="pre">&quot;Message&quot;</span></code></p>
+<p>Remove files from Git:
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">rm</span> <span class="pre">index.html</span></code></p>
+<p>Update all changes:
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span> <span class="pre">-u</span></code></p>
+<p>Remove file but do not track anymore:
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">rm</span> <span class="pre">--cached</span> <span class="pre">index.html</span></code></p>
+<p>Move or rename files:
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">mv</span> <span class="pre">index.html</span> <span class="pre">dir/index_new.html</span></code></p>
+<p>Undo modifications (restore files from latest commited version):
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">checkout</span> <span class="pre">--</span> <span class="pre">index.html</span></code></p>
+<p>Restore file from a custom commit (in current branch):
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">checkout</span> <span class="pre">6eb715d</span> <span class="pre">--</span> <span class="pre">index.html</span></code></p>
+</div>
+<div class="section" id="reset">
+<h2>Reset<a class="headerlink" href="#reset" title="Permalink to this headline">¶</a></h2>
+<p>Go back to commit:
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">revert</span> <span class="pre">073791e7dd71b90daa853b2c5acc2c925f02dbc6</span></code></p>
+<p>Soft reset (move HEAD only; neither staging nor working dir is changed):
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">reset</span> <span class="pre">--soft</span> <span class="pre">073791e7dd71b90daa853b2c5acc2c925f02dbc6</span></code></p>
+<p>Undo latest commit: <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">reset</span> <span class="pre">--soft</span> <span class="pre">HEAD~</span> </code></p>
+<p>Mixed reset (move HEAD and change staging to match repo; does not affect working dir):
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">reset</span> <span class="pre">--mixed</span> <span class="pre">073791e7dd71b90daa853b2c5acc2c925f02dbc6</span></code></p>
+<p>Hard reset (move HEAD and change staging dir and working dir to match repo):
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">reset</span> <span class="pre">--hard</span> <span class="pre">073791e7dd71b90daa853b2c5acc2c925f02dbc6</span></code></p>
+<p>Hard reset of a single file (<code class="docutils literal notranslate"><span class="pre">&#64;</span></code> is short for <code class="docutils literal notranslate"><span class="pre">HEAD</span></code>):
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">checkout</span> <span class="pre">&#64;</span> <span class="pre">--</span> <span class="pre">index.html</span></code></p>
+</div>
+<div class="section" id="update-delete">
+<h2>Update &amp; Delete<a class="headerlink" href="#update-delete" title="Permalink to this headline">¶</a></h2>
+<p>Test-Delete untracked files:
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clean</span> <span class="pre">-n</span></code></p>
+<p>Delete untracked files (not staging):
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clean</span> <span class="pre">-f</span></code></p>
+<p>Unstage (undo adds):
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">reset</span> <span class="pre">HEAD</span> <span class="pre">index.html</span></code></p>
+<p>Update most recent commit (also update the commit message):
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span> <span class="pre">--amend</span> <span class="pre">-m</span> <span class="pre">&quot;New</span> <span class="pre">Message&quot;</span></code></p>
+</div>
+<div class="section" id="branch">
+<h2>Branch<a class="headerlink" href="#branch" title="Permalink to this headline">¶</a></h2>
+<p>Show branches:
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">branch</span></code></p>
+<p>Create branch:
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">branch</span> <span class="pre">branchname</span></code></p>
+<p>Change to branch:
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">checkout</span> <span class="pre">branchname</span></code></p>
+<p>Create and change to new branch:
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">checkout</span> <span class="pre">-b</span> <span class="pre">branchname</span></code></p>
+<p>Rename branch:
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">branch</span> <span class="pre">-m</span> <span class="pre">branchname</span> <span class="pre">new_branchname</span></code> or:
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">branch</span> <span class="pre">--move</span> <span class="pre">branchname</span> <span class="pre">new_branchname</span></code></p>
+<p>Show all completely merged branches with current branch:
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">branch</span> <span class="pre">--merged</span></code></p>
+<p>Delete merged branch (only possible if not HEAD):
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">branch</span> <span class="pre">-d</span> <span class="pre">branchname</span></code> or:
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">branch</span> <span class="pre">--delete</span> <span class="pre">branchname</span></code></p>
+<p>Delete not merged branch:
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">branch</span> <span class="pre">-D</span> <span class="pre">branch_to_delete</span></code></p>
+</div>
+<div class="section" id="merge">
+<h2>Merge<a class="headerlink" href="#merge" title="Permalink to this headline">¶</a></h2>
+<p>True merge (fast forward):
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">merge</span> <span class="pre">branchname</span></code></p>
+<p>Merge to master (only if fast forward):
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">merge</span> <span class="pre">--ff-only</span> <span class="pre">branchname</span></code></p>
+<p>Merge to master (force a new commit):
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">merge</span> <span class="pre">--no-ff</span> <span class="pre">branchname</span></code></p>
+<p>Stop merge (in case of conflicts):
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">merge</span> <span class="pre">--abort</span></code></p>
+<p>Stop merge (in case of conflicts):
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">reset</span> <span class="pre">--merge</span></code> // prior to v1.7.4</p>
+<p>Undo local merge that hasn’t been pushed yet:
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">reset</span> <span class="pre">--hard</span> <span class="pre">origin/master</span></code></p>
+<p>Merge only one specific commit:
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">cherry-pick</span> <span class="pre">073791e7</span></code></p>
+<p>Rebase:
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">checkout</span> <span class="pre">branchname</span></code> » <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">rebase</span> <span class="pre">master</span></code>
+or:
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">merge</span> <span class="pre">master</span> <span class="pre">branchname</span></code>
+(The rebase moves all of the commits in <code class="docutils literal notranslate"><span class="pre">master</span></code> onto the tip of <code class="docutils literal notranslate"><span class="pre">branchname</span></code>.)</p>
+<p>Cancel rebase:
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">rebase</span> <span class="pre">--abort</span></code></p>
+<p>Squash multiple commits into one:
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">rebase</span> <span class="pre">-i</span> <span class="pre">HEAD~3</span></code> (<a class="reference external" href="https://www.devroom.io/2011/07/05/git-squash-your-latests-commits-into-one/">source</a>)</p>
+<p>Squash-merge a feature branch (as one commit):
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">merge</span> <span class="pre">--squash</span> <span class="pre">branchname</span></code> (commit afterwards)</p>
+</div>
+<div class="section" id="stash">
+<h2>Stash<a class="headerlink" href="#stash" title="Permalink to this headline">¶</a></h2>
+<p>Put in stash:
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">stash</span> <span class="pre">save</span> <span class="pre">&quot;Message&quot;</span></code></p>
+<p>Show stash:
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">stash</span> <span class="pre">list</span></code></p>
+<p>Show stash stats:
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">stash</span> <span class="pre">show</span> <span class="pre">stash&#64;{0}</span></code></p>
+<p>Show stash changes:
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">stash</span> <span class="pre">show</span> <span class="pre">-p</span> <span class="pre">stash&#64;{0}</span></code></p>
+<p>Use custom stash item and drop it:
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">stash</span> <span class="pre">pop</span> <span class="pre">stash&#64;{0}</span></code></p>
+<p>Use custom stash item and do not drop it:
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">stash</span> <span class="pre">apply</span> <span class="pre">stash&#64;{0}</span></code></p>
+<p>Use custom stash item and index:
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">stash</span> <span class="pre">apply</span> <span class="pre">--index</span></code></p>
+<p>Create branch from stash:
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">stash</span> <span class="pre">branch</span> <span class="pre">new_branch</span></code></p>
+<p>Delete custom stash item:
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">stash</span> <span class="pre">drop</span> <span class="pre">stash&#64;{0}</span></code></p>
+<p>Delete complete stash:
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">stash</span> <span class="pre">clear</span></code></p>
+</div>
+<div class="section" id="gitignore-gitkeep">
+<h2>Gitignore &amp; Gitkeep<a class="headerlink" href="#gitignore-gitkeep" title="Permalink to this headline">¶</a></h2>
+<p>About: <a class="reference external" href="https://help.github.com/articles/ignoring-files">https://help.github.com/articles/ignoring-files</a></p>
+<p>Useful templates: <a class="reference external" href="https://github.com/github/gitignore">https://github.com/github/gitignore</a></p>
+<p>Add or edit gitignore:
+<code class="docutils literal notranslate"><span class="pre">nano</span> <span class="pre">.gitignore</span></code></p>
+<p>Track empty dir:
+<code class="docutils literal notranslate"><span class="pre">touch</span> <span class="pre">dir/.gitkeep</span></code></p>
+</div>
+<div class="section" id="log">
+<h2>Log<a class="headerlink" href="#log" title="Permalink to this headline">¶</a></h2>
+<p>Show commits:
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">log</span></code></p>
+<p>Show oneline-summary of commits:
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">log</span> <span class="pre">--oneline</span></code></p>
+<p>Show oneline-summary of commits with full SHA-1:
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">log</span> <span class="pre">--format=oneline</span></code></p>
+<p>Show oneline-summary of the last three commits:
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">log</span> <span class="pre">--oneline</span> <span class="pre">-3</span></code></p>
+<p>Show only custom commits:
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">log</span> <span class="pre">--author=&quot;Sven&quot;</span></code>
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">log</span> <span class="pre">--grep=&quot;Message&quot;</span></code>
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">log</span> <span class="pre">--until=2013-01-01</span></code>
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">log</span> <span class="pre">--since=2013-01-01</span></code></p>
+<p>Show only custom data of commit:
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">log</span> <span class="pre">--format=short</span></code>
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">log</span> <span class="pre">--format=full</span></code>
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">log</span> <span class="pre">--format=fuller</span></code>
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">log</span> <span class="pre">--format=email</span></code>
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">log</span> <span class="pre">--format=raw</span></code></p>
+<p>Show changes:
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">log</span> <span class="pre">-p</span></code></p>
+<p>Show every commit since special commit for custom file only:
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">log</span> <span class="pre">6eb715d..</span> <span class="pre">index.html</span></code></p>
+<p>Show changes of every commit since special commit for custom file only:
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">log</span> <span class="pre">-p</span> <span class="pre">6eb715d..</span> <span class="pre">index.html</span></code></p>
+<p>Show stats and summary of commits:
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">log</span> <span class="pre">--stat</span> <span class="pre">--summary</span></code></p>
+<p>Show history of commits as graph:
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">log</span> <span class="pre">--graph</span></code></p>
+<p>Show history of commits as graph-summary:
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">log</span> <span class="pre">--oneline</span> <span class="pre">--graph</span> <span class="pre">--all</span> <span class="pre">--decorate</span></code></p>
+</div>
+<div class="section" id="compare">
+<h2>Compare<a class="headerlink" href="#compare" title="Permalink to this headline">¶</a></h2>
+<p>Compare modified files:
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">diff</span></code></p>
+<p>Compare modified files and highlight changes only:
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">diff</span> <span class="pre">--color-words</span> <span class="pre">index.html</span></code></p>
+<p>Compare modified files within the staging area:
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">diff</span> <span class="pre">--staged</span></code></p>
+<p>Compare branches:
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">diff</span> <span class="pre">master..branchname</span></code></p>
+<p>Compare branches like above:
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">diff</span> <span class="pre">--color-words</span> <span class="pre">master..branchname^</span></code></p>
+<p>Compare commits:
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">diff</span> <span class="pre">6eb715d</span></code>
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">diff</span> <span class="pre">6eb715d..HEAD</span></code>
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">diff</span> <span class="pre">6eb715d..537a09f</span></code></p>
+<p>Compare commits of file:
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">diff</span> <span class="pre">6eb715d</span> <span class="pre">index.html</span></code>
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">diff</span> <span class="pre">6eb715d..537a09f</span> <span class="pre">index.html</span></code></p>
+<p>Compare without caring about spaces:
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">diff</span> <span class="pre">-b</span> <span class="pre">6eb715d..HEAD</span></code> or:
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">diff</span> <span class="pre">--ignore-space-change</span> <span class="pre">6eb715d..HEAD</span></code></p>
+<p>Compare without caring about all spaces:
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">diff</span> <span class="pre">-w</span> <span class="pre">6eb715d..HEAD</span></code> or:
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">diff</span> <span class="pre">--ignore-all-space</span> <span class="pre">6eb715d..HEAD</span></code></p>
+<p>Useful comparings:
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">diff</span> <span class="pre">--stat</span> <span class="pre">--summary</span> <span class="pre">6eb715d..HEAD</span></code></p>
+<p>Blame:
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">blame</span> <span class="pre">-L10,+1</span> <span class="pre">index.html</span></code></p>
+</div>
+<div class="section" id="releases-version-tags">
+<h2>Releases &amp; Version Tags<a class="headerlink" href="#releases-version-tags" title="Permalink to this headline">¶</a></h2>
+<p>Show all released versions:
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">tag</span></code></p>
+<p>Show all released versions with comments:
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">tag</span> <span class="pre">-l</span> <span class="pre">-n1</span></code></p>
+<p>Create release version:
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">tag</span> <span class="pre">v1.0.0</span></code></p>
+<p>Create release version with comment:
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">tag</span> <span class="pre">-a</span> <span class="pre">v1.0.0</span> <span class="pre">-m</span> <span class="pre">'Message'</span></code></p>
+<p>Checkout a specific release version:
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">checkout</span> <span class="pre">v1.0.0</span></code></p>
+</div>
+<div class="section" id="collaborate">
+<h2>Collaborate<a class="headerlink" href="#collaborate" title="Permalink to this headline">¶</a></h2>
+<p>Show remote:
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">remote</span></code></p>
+<p>Show remote details:
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">remote</span> <span class="pre">-v</span></code></p>
+<p>Add remote upstream from GitHub project:
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">remote</span> <span class="pre">add</span> <span class="pre">upstream</span> <span class="pre">https://github.com/user/project.git</span></code></p>
+<p>Add remote upstream from existing empty project on server:
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">remote</span> <span class="pre">add</span> <span class="pre">upstream</span> <span class="pre">ssh://root&#64;123.123.123.123/path/to/repository/.git</span></code></p>
+<p>Fetch:
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">fetch</span> <span class="pre">upstream</span></code></p>
+<p>Fetch a custom branch:
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">fetch</span> <span class="pre">upstream</span> <span class="pre">branchname:local_branchname</span></code></p>
+<p>Merge fetched commits:
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">merge</span> <span class="pre">upstream/master</span></code></p>
+<p>Remove origin:
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">remote</span> <span class="pre">rm</span> <span class="pre">origin</span></code></p>
+<p>Show remote branches:
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">branch</span> <span class="pre">-r</span></code></p>
+<p>Show all branches (remote and local):
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">branch</span> <span class="pre">-a</span></code></p>
+<p>Create and checkout branch from a remote branch:
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">checkout</span> <span class="pre">-b</span> <span class="pre">local_branchname</span> <span class="pre">upstream/remote_branchname</span></code></p>
+<p>Compare:
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">diff</span> <span class="pre">origin/master..master</span></code></p>
+<p>Push (set default with <code class="docutils literal notranslate"><span class="pre">-u</span></code>):
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span> <span class="pre">-u</span> <span class="pre">origin</span> <span class="pre">master</span></code></p>
+<p>Push:
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span> <span class="pre">origin</span> <span class="pre">master</span></code></p>
+<p>Force-Push:
+`git push origin master –force</p>
+<p>Pull:
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">pull</span></code></p>
+<p>Pull specific branch:
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">pull</span> <span class="pre">origin</span> <span class="pre">branchname</span></code></p>
+<p>Fetch a pull request on GitHub by its ID and create a new branch:
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">fetch</span> <span class="pre">upstream</span> <span class="pre">pull/ID/head:new-pr-branch</span></code></p>
+<p>Clone to localhost:
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">https://github.com/user/project.git</span></code> or:
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">ssh://user&#64;domain.com/~/dir/.git</span></code></p>
+<p>Clone to localhost folder:
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">https://github.com/user/project.git</span> <span class="pre">~/dir/folder</span></code></p>
+<p>Clone specific branch to localhost:
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">-b</span> <span class="pre">branchname</span> <span class="pre">https://github.com/user/project.git</span></code></p>
+<p>Clone with token authentication (in CI environment):
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">https://oauth2:&lt;token&gt;&#64;gitlab.com/username/repo.git</span></code></p>
+<p>Delete remote branch (push nothing):
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span> <span class="pre">origin</span> <span class="pre">:branchname</span></code> or:
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span> <span class="pre">origin</span> <span class="pre">--delete</span> <span class="pre">branchname</span></code></p>
+</div>
+<div class="section" id="archive">
+<h2>Archive<a class="headerlink" href="#archive" title="Permalink to this headline">¶</a></h2>
+<p>Create a zip-archive: <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">archive</span> <span class="pre">--format</span> <span class="pre">zip</span> <span class="pre">--output</span> <span class="pre">filename.zip</span> <span class="pre">master</span></code></p>
+<p>Export/write custom log to a file: <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">log</span> <span class="pre">--author=sven</span> <span class="pre">--all</span> <span class="pre">&gt;</span> <span class="pre">log.txt</span></code></p>
+</div>
+<div class="section" id="troubleshooting">
+<h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">¶</a></h2>
+<p>Ignore files that have already been committed to a Git repository: <a class="reference external" href="http://stackoverflow.com/a/1139797/1815847">http://stackoverflow.com/a/1139797/1815847</a></p>
+</div>
+<div class="section" id="security">
+<h2>Security<a class="headerlink" href="#security" title="Permalink to this headline">¶</a></h2>
+<p>Hide Git on the web via <code class="docutils literal notranslate"><span class="pre">.htaccess</span></code>: <code class="docutils literal notranslate"><span class="pre">RedirectMatch</span> <span class="pre">404</span> <span class="pre">/\.git</span></code>
+(more info here: <a class="reference external" href="http://stackoverflow.com/a/17916515/1815847">http://stackoverflow.com/a/17916515/1815847</a>)</p>
+</div>
+<div class="section" id="large-file-storage">
+<h2>Large File Storage<a class="headerlink" href="#large-file-storage" title="Permalink to this headline">¶</a></h2>
+<p>Website: <a class="reference external" href="https://git-lfs.github.com/">https://git-lfs.github.com/</a></p>
+<p>Install: <code class="docutils literal notranslate"><span class="pre">brew</span> <span class="pre">install</span> <span class="pre">git-lfs</span></code></p>
+<p>Track <code class="docutils literal notranslate"><span class="pre">*.psd</span></code> files: <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">lfs</span> <span class="pre">track</span> <span class="pre">&quot;*.psd&quot;</span></code> (init, add, commit and push as written above)</p>
+</div>
+<div class="section" id="git-config">
+<h2>Git Config<a class="headerlink" href="#git-config" title="Permalink to this headline">¶</a></h2>
+<p>Website: <a class="reference external" href="https://git-scm.com/docs/git-config">https://git-scm.com/docs/git-config</a></p>
+<p>See config file:
+<code class="docutils literal notranslate"><span class="pre">less</span> <span class="pre">~/.gitconfig</span></code></p>
+<p>List configs:
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">config</span> <span class="pre">-l</span></code></p>
+<p>Set user.email:
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">config</span> <span class="pre">-global</span> <span class="pre">user.email</span> <span class="pre">${EMAIL}</span></code></p>
+<p>Set <a class="reference external" href="http://user.name">user.name</a>:
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">config</span> <span class="pre">-global</span> <span class="pre">user.email</span> <span class="pre">${NAME}</span></code></p>
+<p>Cache password or token: <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">config</span> <span class="pre">-global</span> <span class="pre">credential.helper</span> <span class="pre">cache</span></code></p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./content"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            
+
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="docker.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">Docker Cheatsheet</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="pyspark.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title">Pyspark Cheatsheet</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By X. Anh Do<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
