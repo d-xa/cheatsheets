@@ -15,3 +15,9 @@ pandoc test.epub -o test.pdf
 ``` 
 evince file.pdf
 ``` 
+
+> reduce image size
+```
+# sudo apt-get install imagemagick
+convert -resize 30% image.jpg image_new.jpg
+```

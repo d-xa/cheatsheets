@@ -6,6 +6,7 @@ Check out the html version of the cheatsheet book: [Cheatsheets Book](https://d-
 - [Bash Cheatsheet](book/content/markdown/bash.md)
 - [Bibliography Test](book/content/markdown/bibliography.md)
 - [Casi 1](book/content/markdown/casi_1.md)
+- [Conda Cheatsheet](book/content/markdown/conda.md)
 - [Django Cheatsheet](book/content/markdown/django.md)
 - [Docker Cheatsheet](book/content/markdown/docker.md)
 - [Flask Cheatsheet](book/content/markdown/flask.md)
