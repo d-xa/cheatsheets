@@ -651,6 +651,14 @@
 </div>
 <div class="section" id="further-manipulations">
 <h2>Further manipulations<a class="headerlink" href="#further-manipulations" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># sort data</span>
+<span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;ColumnName&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>change index / reindex</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">reindex</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">])</span>
+</pre></div>
+</div>
 </div>
 </div>
 <div class="tex2jax_ignore mathjax_ignore section" id="datetimelike-manipulation-functions">
@@ -658,6 +666,14 @@
 <p>pd.to_datetime()
 pd.date_range()
 pd.bdate_range()</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># to convert string into datetime object</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="s2">&quot;01.01.2022&quot;</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s1">&#39;</span><span class="si">%d</span><span class="s1">.%m.%Y&#39;</span><span class="p">))</span>
+<span class="c1"># to convert whole column of strings into datetime object</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;date&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;stringdate&#39;</span><span class="p">],</span> <span class="nb">format</span><span class="o">=</span><span class="s1">&#39;</span><span class="si">%d</span><span class="s1">.%m.%Y&#39;</span><span class="p">)</span>
+<span class="c1"># to extract years of datetime object</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;date&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">year</span>
+</pre></div>
+</div>
 </div>
 <div class="tex2jax_ignore mathjax_ignore section" id="attributes-of-dataframe-and-series-objects">
 <h1>Attributes of DataFrame and Series objects<a class="headerlink" href="#attributes-of-dataframe-and-series-objects" title="Permalink to this headline">¶</a></h1>
