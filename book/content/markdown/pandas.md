@@ -201,13 +201,31 @@ IT          NaN  NaN  Green
 ```
 
 ## Further manipulations
+```python
+# sort data
+df.sort_values(by='ColumnName')
+```
 
-
+change index / reindex
+```python
+df.reindex(index=[3,0,1,2])
+```
 
 # Datetimelike manipulation functions
 pd.to_datetime()
 pd.date_range()
 pd.bdate_range()
+
+
+```python
+# to convert string into datetime object
+pd.to_datetime("01.01.2022", format='%d.%m.%Y'))
+# to convert whole column of strings into datetime object
+df['date'] = pd.to_datetime( df['stringdate'], format='%d.%m.%Y')
+# to extract years of datetime object
+df['date'].dt.year
+``` 
+
 
 # Attributes of DataFrame and Series objects
 ## Series attributes
