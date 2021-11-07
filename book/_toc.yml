@@ -3,6 +3,7 @@
 format: jb-book
 root: content/markdown/intro
 chapters:
+- file: content/markdown/ESL
 - file: content/markdown/casi_1
 - file: content/markdown/bibliography
 #- file: content/notebook/pandas
