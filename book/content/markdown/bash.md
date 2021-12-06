@@ -31,6 +31,11 @@ Completely remove software and dependencies
 sudo apt-get --purge autoremove $PACKAGENAME
 ```
 
+Create symlink
+```bash
+ln -s /path/to/origin /path/to/new
+```
+
 ## Display settings
 Get current setting
 ``` 

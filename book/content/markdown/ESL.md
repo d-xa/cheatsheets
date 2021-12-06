@@ -40,4 +40,4 @@ Terminologoy:
 | **X** | N x p matrix with N observations and p features/columns/inputs |
 
 
-### 2.3 
+### 2.3 Two Simple Approaches to Prediction: Least Squares and Nearest Neighbors
